@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+<script src="lottie-player.js"></script>
+<style>
+/*This is a little note I have decided to leave as well if you were to ever get curious on how the file works
+You are just such a ray of sunshine that I pray never sees the sunset, I hope you enjoy reading this and the card pretty (: */
+    body {
+        background: linear-gradient(135deg, #0a0f24, #1c2a48);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .card {
+        border: 2px solid #9bb1ff;
+        background: #ffffff;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(155, 177, 255, 0.4);
+        max-width: 500px;
+        padding: 220px 80px 80px 80px;
+        position: relative;
+        overflow: hidden;
+    }
+    @keyframes fadein {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes skylineGlow {
+        0% { filter: brightness(1); }
+        50% { filter: brightness(1.15); }
+        100% { filter: brightness(1); }
+    }
+    @keyframes skylineMove {
+        0% { background-position-x: 0; }
+        100% { background-position-x: -200px; }
+    }
+    @keyframes starTwinkle {
+        0% { opacity: 0.6; }
+        100% { opacity: 1; }
+    }
+    h1 {
+        margin-bottom: 10px;
+        color: #1c2a48
+    }
+    .photo-wrapper {
+        mask-image: radial-gradient(circle, black 70%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+        position: relative;
+        display: inline-block;
+        padding: 60px;
+        border-radius: 8px;
+
+    background-image: url("Backdrop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+    .photo{
+        max-width: 210px;
+        border-radius: 8px;
+        margin-top: 20px;
+        padding: 10px;
+        background: transparent;
+    }
+    .card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        animation: skylineGlow 4s ease-in-out infinite,
+               skylineMove 20s linear infinite;
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='70' viewBox='0 0 600 70'%3E%3Cpath fill='%230a0f24' d='M0 70V45h15V25h15v15h20V15h20v20h20V10h20v20h20V20h20v30h20V25h20v30h20V35h20v25h20V40h20v25h20V45h20v10h20V25h20v25h20V15h20v20h20V10h20v20h20V20h20v30h20V25h20v35h20V40h20v30z'/%3E%3C/svg%3E");
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <h1>🎉 Happy Birthday! 🎉</h1>
+    <p>Happy Birthday pretty! Hope you are having lots of fun in NY and being safe! Take plenty of pictures (:</p>
+    <lottie-player 
+    src="animation_spider.json"
+    background="transparent"
+    speed="1"
+    style="width: 150px; height: 150px; margin: 0 auto;"
+    loop
+    autoplay>
+    </lottie-player>
+     <div class="photo-wrapper">
+    <img src="SaintPatricks.jpg" class="photo" alt="Birthday Image">
+</div>
+     <p style="margin-top: 30px; font-style: italic;">
+    — From Spider-Man (Uri)
+    </p>
+</div>
+</body>
+</html>
